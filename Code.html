@@ -105,6 +105,18 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+
+#content-mobile {display: block;}
+
+}
+
+
+
 /* so many styles*/
 
 
@@ -117,36 +129,38 @@ h1, h2, h3, h4, h5, h6 {
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
     <a href="#home" class="w3-bar-item w3-button">Innside Restaurant</a>
+    <a href="#lunch" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Lunch</a>
+    <a href="#BF" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Breakfest</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">About/Takeout</a>
+     
     
-
     <!-- navbar menu links. -->
 
+    <div id="content-mobile">
+      <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
 
 
-    <div class="container" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-
-
-    <script>
-      function myFunction(x) {
-        x.classList.toggle("change");
-      }
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
       </script>
     
-      
+    
         
           <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
             <a href="#about" class="w3-bar-item w3-button">About/Takeout</a>
             <a href="#BF" class="w3-bar-item w3-button">Breakfest</a>
             <a href="#lunch" class="w3-bar-item w3-button">Lunch</a>
           </div>
-      
     </div>
     
-    <script>
+    
+      <script>
     function myFunction() {
       var x = document.getElementById("Demo");
       if (x.className.indexOf("w3-show") == -1) { 
@@ -156,13 +170,16 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
       
+
   
     </script>
 
       
-    </div>
+    
   </div>
 </div>
+
+
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
@@ -185,13 +202,13 @@ h1, h2, h3, h4, h5, h6 {
   
     
      
-    <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-row w3-padding-64 " id="about">
         <div class="w3-col l6 w3-padding-large">
 
     
       <h1><b>About Us</b></h1><br>
       
-      <h3>Family Owned and operated for over 20 Years. Open for breakfest & lunch,
+      <h3>Family Owned and operated for over 25 Years. Open for breakfest & lunch,
            Monday through Friday. Downtown Chattanooga, TN (Ground level of the pinnacle building).</h3> 
 
       <br>
@@ -231,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
       <h4><u>Eggs</u></h4>
       <p>Two Eggs (Any Style) - $5.50</p>
       <p class="w3-text-grey">All Egg Plates Served with Grits or Gravy, and Biscuit or Toast</p>
-      <p class="w3-text-grey">Add Hashbrown - $2.00, Add Cheese - 50¢, Add 1 Pancake - $1.50</p>
+      <p class="w3-text-grey"> Add Cheese - 50¢, Add Hashbrown - $2.00, Add 1 Pancake - $1.50</p>
       
       	
 		<p>2 Eggs with Bologna - $6.25</p>
@@ -384,21 +401,9 @@ h1, h2, h3, h4, h5, h6 {
       </div>
     </div>
       
-      
-    
-    
   </div>
 
-  <hr>
-
-  <!-- Contact Section -->
-  
-  
-<!-- End page content -->
 </div>
-
-<!-- Footer -->
-
 
 </body>
 </html>
